@@ -38,7 +38,7 @@ by. sjafrudin lamusu
     - Service.LiveStreamStore will consume rtmp stream from LiveGo. And when the stream is complete, the video will be directly encoded into MP4 format, then stored in the S3 Bucket. Saved videos are publicly accessible via the CloudFront url. FilePath & video metadata will be stored in DynamoDB, via SQS event to Lambda Function.
 
 1. How can videos be played by mentees through the MyMentor app?
-    - MyMentor app can broadcast video broadcasts from LiveGo server, using Client Player which supports HLS format: `https://[livego-server]:7002/{appname}/movie.m3u8`.
+    - MyMentor app can play the live video from LiveGo server, using Client Player which supports HLS format: `https://[livego-server]:7002/{appname}/movie.m3u8`.
 
 1. Api Endpoint for the live streaming recordings?
     - MyMentor & MyMentee app can query metadata & filepath with endpoint `GET https://[apigateway-url]/store-live?app={appname}"`
